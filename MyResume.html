@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: #e1d80b;
+            color: #ffffff;
+            padding: 50px;
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        /* Column Styles */
+        .col {
+            padding: 20px;
+        }
+
+        .col h2 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .col p {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Column width classes */
+        .col-1 { width: 8.33%; }
+        .col-2 { width: 16.66%; }
+        .col-3 { width: 25%; }
+        .col-4 { width: 33.33%; }
+        .col-5 { width: 41.66%; }
+        .col-6 { width: 50%; }
+        .col-7 { width: 58.33%; }
+        .col-8 { width: 66.66%; }
+        .col-9 { width: 75%; }
+        .col-10 { width: 83.33%; }
+        .col-11 { width: 91.66%; }
+        .col-12 { width: 100%; }
+        
+        /* Layout Adjustments */
+        .container {
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* Large Screens (1025px and above) */
+        @media screen and (min-width: 1025px) {
+            .container {
+                width: 100%;
+                padding: 20px 10%;
+            }
+
+            /* Columns for large screens */
+            .col {
+                float: left;
+                
+            }
+
+            .col:nth-child(1) {
+                width: 33.33%; /* Personal Information */
+            }
+
+            .col:nth-child(2) {
+                width: 33.33%; /* Contact Details */
+            }
+
+            .col:nth-child(3) {
+                width: 33.33%; /* Educational Attainment */
+            }
+
+           body {background-color: lightsteelblue;}
+        }
+
+        /* Medium Screens (768px to 1024px) */
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            .container {
+                width: 90%;
+            }
+
+            .col {
+                float: left;
+                margin-right: 4%; /* Space between columns */
+            }
+
+            .col:nth-child(1),
+            .col:nth-child(2) {
+                width: 48%; /* Two columns side by side */
+            }
+
+            .col:nth-child(3) {
+                width: 100%; /* Educational section takes full width */
+            }
+
+            .col:nth-child(2) {
+                margin-right: 0;
+            }
+          body {background-color: pink;}
+        }
+
+        /* Small Screens (below 768px) */
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .col {
+                width: 100%; /* Stack the columns vertically */
+                margin-right: 0;
+            }
+
+            .col h2 {
+                font-size: 1.2em;
+            }
+          body {background-color: lightcoral;}
+        }
+    </style>
+
+    <title>My Resume</title>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Sean Gabrielle P. Gustilo</h1>
+    </div>
+
+    <div class="container">
+        <!-- Personal Information Section -->
+        <div class="col col-4">
+            <h2>Personal Information</h2>
+            <p>Age : 15</p>
+            <p>Gender : Male</p>
+            <p>Birth Date : January 14, 2009</p>
+            <p>Birth Place : Muntinlupa</p>
+        </div>
+
+        <!-- Contact Details Section -->
+        <div class="col col-4">
+            <h2>Contact Details</h2>
+            <p>Mobile Number : 0916 657 7690</p>
+            <p>Landline : 7089 0946</p>
+            <p>Email : sgpgustilo@manresaschool.edu.ph</p>
+        </div>
+
+        <!-- Educational Attainment Section -->
+        <div class="col col-4">
+            <h2>Educational Attainment</h2>
+            <p>Junior High School : Manresa School</p>
+            <p>Grade School : Manresa School</p>
+            <p>Elementary : Mary, Cause of Our Joy Catholic School</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
